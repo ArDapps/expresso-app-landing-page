@@ -1,4 +1,6 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
 import { useLanguage } from '@/lib/i18n';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -36,19 +38,20 @@ export function ContactForm() {
               <input type="hidden" name="_next" value="" />
 
               <div className="space-y-2">
-                <label htmlFor="name" className={`block text-sm font-medium text-foreground ${isRtl ? 'text-right' : 'text-left'}`}>
+                <label htmlFor="name" className="block text-sm font-medium text-foreground text-start">
                   {t('contactName')}
                 </label>
                 <Input 
                   id="name" 
                   name="name" 
                   required 
-                  className={`bg-background ${isRtl ? 'text-right' : 'text-left'}`} 
+                  placeholder={t('contactNamePlaceholder')}
+                  className="bg-background text-start" 
                 />
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="email" className={`block text-sm font-medium text-foreground ${isRtl ? 'text-right' : 'text-left'}`}>
+                <label htmlFor="email" className="block text-sm font-medium text-foreground text-start">
                   {t('contactEmail')}
                 </label>
                 <Input 
@@ -56,12 +59,13 @@ export function ContactForm() {
                   name="email" 
                   type="email" 
                   required 
-                  className={`bg-background ${isRtl ? 'text-right' : 'text-left'}`} 
+                  placeholder={t('contactEmailPlaceholder')}
+                  className="bg-background text-start" 
                 />
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="message" className={`block text-sm font-medium text-foreground ${isRtl ? 'text-right' : 'text-left'}`}>
+                <label htmlFor="message" className="block text-sm font-medium text-foreground text-start">
                   {t('contactMessage')}
                 </label>
                 <Textarea 
@@ -69,7 +73,8 @@ export function ContactForm() {
                   name="message" 
                   rows={5} 
                   required 
-                  className={`bg-background resize-none ${isRtl ? 'text-right' : 'text-left'}`} 
+                  placeholder={t('contactMessagePlaceholder')}
+                  className="bg-background resize-none text-start" 
                 />
               </div>
 

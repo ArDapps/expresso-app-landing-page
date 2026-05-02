@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState, useRef } from 'react';
 import { useLanguage } from '@/lib/i18n';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
@@ -139,10 +141,10 @@ function BroadcastVisual({ playing }: { playing: boolean }) {
         transition={{ delay: 0.5 }}
         className="bg-card border border-border rounded-2xl p-4 shadow-xl"
       >
-        <p className={`text-[10px] uppercase tracking-widest text-muted-foreground mb-2 font-semibold ${isRtl ? 'text-right' : ''}`}>
+        <p className="text-[10px] uppercase tracking-widest text-muted-foreground mb-2 font-semibold">
           {t('multiSendLabel1')}
         </p>
-        <div className={`text-sm text-foreground leading-relaxed min-h-[44px] ${isRtl ? 'text-right font-[Cairo]' : ''}`}>
+        <div className="text-sm text-foreground leading-relaxed min-h-[44px]">
           {typedMsg}
           {phase === 'typing-msg' && (
             <motion.span
@@ -161,7 +163,7 @@ function BroadcastVisual({ playing }: { playing: boolean }) {
         transition={{ delay: 0.65 }}
         className="bg-card border border-border rounded-2xl p-4 shadow-xl"
       >
-        <p className={`text-[10px] uppercase tracking-widest text-muted-foreground mb-3 font-semibold ${isRtl ? 'text-right' : ''}`}>
+        <p className="text-[10px] uppercase tracking-widest text-muted-foreground mb-3 font-semibold">
           {t('multiSendLabel2')}
         </p>
         <div className="space-y-2">
@@ -169,10 +171,10 @@ function BroadcastVisual({ playing }: { playing: boolean }) {
             <AnimatePresence key={r.num}>
               {i < visibleRecipients && (
                 <motion.div
-                  initial={{ opacity: 0, x: isRtl ? 16 : -16, height: 0 }}
+                  initial={{ opacity: 0, x: -16, height: 0 }}
                   animate={{ opacity: 1, x: 0, height: 'auto' }}
                   transition={{ type: 'spring', stiffness: 300, damping: 28 }}
-                  className={`flex items-center gap-2.5 ${isRtl ? 'flex-row-reverse' : ''}`}
+                  className="flex items-center gap-2.5"
                 >
                   {/* Avatar */}
                   <div
@@ -181,12 +183,12 @@ function BroadcastVisual({ playing }: { playing: boolean }) {
                   >
                     {r.name[0]}
                   </div>
-                  <div className={`flex-1 min-w-0 ${isRtl ? 'text-right' : ''}`}>
+                  <div className="flex-1 min-w-0">
                     <p className="text-xs font-semibold text-foreground leading-none">{r.name}</p>
                     <p className="text-[11px] text-muted-foreground font-mono mt-0.5">{r.num}</p>
                   </div>
                   {/* Sent status */}
-                  <div className={`flex items-center gap-1 flex-shrink-0 ${isRtl ? 'flex-row-reverse' : ''}`}>
+                  <div className="flex items-center gap-1 flex-shrink-0">
                     {isSending && !sentSet.has(i) && (
                       <motion.div
                         animate={{ rotate: 360 }}

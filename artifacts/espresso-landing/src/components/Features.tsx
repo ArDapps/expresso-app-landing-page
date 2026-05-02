@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { useLanguage } from '@/lib/i18n';
 import { motion } from 'framer-motion';
@@ -37,17 +39,17 @@ export function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.08 }}
-              className="bg-card border border-border p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+              className="bg-card border border-border p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col"
             >
-              <div className={`flex items-center gap-3 mb-3 ${isRtl ? 'flex-row-reverse' : ''}`}>
+              <div className="flex items-center gap-3 mb-3">
                 <div className="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                   {feature.icon}
                 </div>
-                <h3 className={`text-lg font-semibold ${isRtl ? 'text-right' : 'text-left'}`}>
+                <h3 className="text-lg font-semibold">
                   {t(feature.titleKey)}
                 </h3>
               </div>
-              <p className={`text-sm sm:text-base text-muted-foreground leading-relaxed ${isRtl ? 'text-right' : 'text-left'}`}>
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 {t(feature.descKey)}
               </p>
             </motion.div>

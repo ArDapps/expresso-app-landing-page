@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '@/lib/i18n';
 import { motion, AnimatePresence, useMotionValue, useTransform, animate } from 'framer-motion';
@@ -64,7 +66,7 @@ function TypingFlow() {
         <p className="text-[10px] uppercase tracking-widest text-muted-foreground mb-2 font-semibold">
           {isRtl ? 'رقم الهاتف' : 'Phone Number'}
         </p>
-        <div className={`flex items-center gap-2 font-mono text-sm text-foreground min-h-[24px] ${isRtl ? 'flex-row-reverse' : ''}`}>
+        <div className="flex items-center gap-2 font-mono text-sm text-foreground min-h-[24px]">
           <span className="text-primary opacity-60 text-base">+</span>
           <span>{typed}</span>
           <motion.span
@@ -130,7 +132,7 @@ function TypingFlow() {
             className="bg-card border border-border rounded-2xl p-4 shadow-xl space-y-2"
           >
             {/* WhatsApp-style chat header */}
-            <div className={`flex items-center gap-2 border-b border-border pb-2 mb-3 ${isRtl ? 'flex-row-reverse' : ''}`}>
+            <div className="flex items-center gap-2 border-b border-border pb-2 mb-3">
               <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center">
                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-primary">
                   <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
@@ -234,7 +236,7 @@ export function Hero() {
               initial={{ opacity: 0, scale: 0.85 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.1, type: 'spring', stiffness: 260, damping: 20 }}
-              className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary font-semibold text-xs mb-6 ${isRtl ? 'flex-row-reverse' : ''}`}
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary font-semibold text-xs mb-6"
             >
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
@@ -268,7 +270,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className={`flex flex-col sm:flex-row items-stretch sm:items-center gap-3 justify-center lg:justify-start ${isRtl ? 'sm:flex-row-reverse lg:justify-end' : ''}`}
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 justify-center lg:justify-start"
             >
               <a
                 href="https://apps.apple.com/eg/app/espresso-messages-for-whatsapp/id1331369255"
@@ -278,7 +280,7 @@ export function Hero() {
               >
                 <Button
                   size="lg"
-                  className={`w-full h-12 px-6 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-sm shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:scale-[1.02] active:scale-[0.98] transition-all gap-2 ${isRtl ? 'flex-row-reverse' : ''}`}
+                  className="w-full h-12 px-6 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-sm shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:scale-[1.02] active:scale-[0.98] transition-all gap-2"
                 >
                   <AppleIcon />
                   {t('cta')}
@@ -289,16 +291,16 @@ export function Hero() {
                 download
                 className="w-full sm:w-auto relative"
               >
-                <span className={`absolute -top-2.5 ${isRtl ? 'left-4' : 'right-4'} z-10 bg-primary text-primary-foreground text-[9px] font-black px-1.5 py-0.5 rounded-full tracking-widest uppercase shadow`}>
+                <span className="absolute -top-2.5 right-4 z-10 bg-primary text-primary-foreground text-[9px] font-black px-1.5 py-0.5 rounded-full tracking-widest uppercase shadow">
                   FREE
                 </span>
                 <Button
                   size="lg"
                   variant="outline"
-                  className={`w-full h-12 px-6 rounded-full border-2 border-primary/50 text-foreground hover:border-primary hover:bg-primary/10 hover:scale-[1.02] active:scale-[0.98] font-semibold text-sm transition-all gap-2 ${isRtl ? 'flex-row-reverse' : ''}`}
+                  className="w-full h-12 px-6 rounded-full border-border hover:bg-muted text-foreground font-semibold text-sm transition-all gap-2"
                 >
                   <AndroidIcon />
-                  {t('ctaAndroid')}
+                  Android APK
                 </Button>
               </a>
             </motion.div>

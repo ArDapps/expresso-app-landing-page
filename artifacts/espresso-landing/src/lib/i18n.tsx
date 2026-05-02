@@ -1,3 +1,5 @@
+"use client";
+
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 type Language = 'en' | 'ar';
@@ -94,9 +96,37 @@ export const dict: Dictionary = {
     en: "Message",
     ar: "الرسالة"
   },
+  contactNamePlaceholder: {
+    en: "Enter your full name",
+    ar: "أدخل اسمك بالكامل"
+  },
+  contactEmailPlaceholder: {
+    en: "Enter your email address",
+    ar: "أدخل بريدك الإلكتروني"
+  },
+  contactMessagePlaceholder: {
+    en: "How can we help you?",
+    ar: "كيف يمكننا مساعدتك؟"
+  },
   contactSubmit: {
     en: "Send Message",
     ar: "إرسال الرسالة"
+  },
+  footerPrivacy: {
+    en: "Privacy Policy",
+    ar: "سياسة الخصوصية"
+  },
+  footerTerms: {
+    en: "Terms of Service",
+    ar: "شروط الخدمة"
+  },
+  footerContact: {
+    en: "Contact",
+    ar: "اتصل بنا"
+  },
+  footerDescription: {
+    en: "The fastest way to message anyone on WhatsApp without saving their number.",
+    ar: "أسرع طريقة لمراسلة أي شخص على واتساب بدون حفظ رقمه."
   },
   feature1Title: {
     en: "Message without saving",
@@ -190,8 +220,9 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   }, [lang]);
 
   const t = (key: string): string => {
-    if (!dict[key]) return key;
-    return dict[key][lang];
+    const entry = dict[key];
+    if (!entry) return key;
+    return entry[lang];
   };
 
   return (
