@@ -14,43 +14,65 @@ export function Screenshots() {
   ];
 
   return (
-    <section className="py-24 bg-muted/30 overflow-hidden">
+    <section className="py-16 sm:py-24 bg-muted/20 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.h2 
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl font-bold mb-4"
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4"
           >
             {t('screenshotsHeading')}
           </motion.h2>
+          <p className="text-sm text-muted-foreground">
+            {t('screenshotsSubtext') || 'Swipe to explore'}
+          </p>
         </div>
+      </div>
 
-        {/* CSS-only infinite horizontal scroll or flex wrap */}
-        <div className="flex justify-center flex-wrap gap-8">
-          {screenshots.map((screenshot, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="w-[240px] shrink-0"
-            >
-              <div className="iphone-mockup shadow-xl transition-transform hover:-translate-y-2 duration-300">
-                <img
-                  src={screenshot.src}
-                  alt={screenshot.alt}
-                  width="460"
-                  height="996"
-                  loading="lazy"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            </motion.div>
-          ))}
-        </div>
+      {/* Horizontal scroll strip — full bleed, no container constraint */}
+      <div
+        className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-6 px-4 sm:px-8"
+        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+      >
+        {/* Left spacer so first card isn't flush against edge */}
+        <div className="shrink-0 w-2 sm:w-8" aria-hidden />
+
+        {screenshots.map((screenshot, idx) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, scale: 0.92 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: idx * 0.08 }}
+            className="shrink-0 snap-center w-[200px] sm:w-[240px]"
+          >
+            <div className="iphone-mockup shadow-2xl transition-transform duration-300 hover:-translate-y-2">
+              <img
+                src={screenshot.src}
+                alt={screenshot.alt}
+                width="460"
+                height="996"
+                loading={idx === 0 ? 'eager' : 'lazy'}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </motion.div>
+        ))}
+
+        {/* Right spacer */}
+        <div className="shrink-0 w-2 sm:w-8" aria-hidden />
+      </div>
+
+      {/* Scroll indicator dots */}
+      <div className="flex justify-center gap-2 mt-4">
+        {screenshots.map((_, idx) => (
+          <div
+            key={idx}
+            className={`h-1.5 rounded-full bg-primary transition-all ${idx === 0 ? 'w-6 opacity-100' : 'w-1.5 opacity-30'}`}
+          />
+        ))}
       </div>
     </section>
   );
