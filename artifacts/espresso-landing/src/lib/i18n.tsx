@@ -138,6 +138,14 @@ export const dict: Dictionary = {
     en: "No steps, no friction. Just tap and start chatting.",
     ar: "لا خطوات، لا تعقيد. فقط انقر وابدأ."
   },
+  feature6Title: {
+    en: "Multi-Send to many",
+    ar: "إرسال جماعي للكثيرين"
+  },
+  feature6Desc: {
+    en: "Paste a list of numbers and send your message to all of them at once — no contacts needed.",
+    ar: "الصق قائمة أرقام وأرسل رسالتك للجميع دفعة واحدة — بدون حفظ أي جهة اتصال."
+  },
   step1Title: {
     en: "1. Copy any number",
     ar: "1. انسخ أي رقم"

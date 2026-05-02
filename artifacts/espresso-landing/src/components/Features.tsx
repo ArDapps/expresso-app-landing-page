@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '@/lib/i18n';
 import { motion } from 'framer-motion';
-import { MessageCircle, Briefcase, Clipboard, UserCircle, Zap } from 'lucide-react';
+import { MessageCircle, Briefcase, Clipboard, UserCircle, Zap, Send } from 'lucide-react';
 
 export function Features() {
   const { t, isRtl } = useLanguage();
@@ -12,6 +12,7 @@ export function Features() {
     { icon: <Clipboard className="w-6 h-6 text-primary" />, titleKey: 'feature3Title', descKey: 'feature3Desc' },
     { icon: <UserCircle className="w-6 h-6 text-primary" />, titleKey: 'feature4Title', descKey: 'feature4Desc' },
     { icon: <Zap className="w-6 h-6 text-primary" />, titleKey: 'feature5Title', descKey: 'feature5Desc' },
+    { icon: <Send className="w-6 h-6 text-primary" />, titleKey: 'feature6Title', descKey: 'feature6Desc' },
   ];
 
   return (
