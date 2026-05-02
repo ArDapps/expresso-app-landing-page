@@ -22,6 +22,10 @@ export const dict: Dictionary = {
     en: "Download on the App Store",
     ar: "حمّل من App Store"
   },
+  ctaAndroid: {
+    en: "Download for Android",
+    ar: "حمّل لأندرويد"
+  },
   featuresHeading: {
     en: "Everything You Need",
     ar: "كل ما تحتاجه"
