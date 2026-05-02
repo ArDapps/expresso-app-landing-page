@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { Features } from '@/components/Features';
+import { MultiSend } from '@/components/MultiSend';
 import { HowItWorks } from '@/components/HowItWorks';
 import { Screenshots } from '@/components/Screenshots';
 import { BusinessCallout } from '@/components/BusinessCallout';
@@ -15,6 +16,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <Features />
+        <MultiSend />
         <HowItWorks />
         <Screenshots />
         <BusinessCallout />

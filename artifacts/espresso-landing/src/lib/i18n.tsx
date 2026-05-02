@@ -26,6 +26,38 @@ export const dict: Dictionary = {
     en: "Download for Android",
     ar: "حمّل لأندرويد"
   },
+  multiSendHeading: {
+    en: "Send to Many. Save No One.",
+    ar: "أرسل للجميع. بدون حفظ أي رقم."
+  },
+  multiSendSub: {
+    en: "Paste a list of numbers, write your message once, and Espresso blasts it across every WhatsApp conversation in seconds.",
+    ar: "الصق قائمة أرقام، اكتب رسالتك مرة واحدة، وإسبريسو يرسلها لجميع المحادثات فوراً."
+  },
+  multiSendBadge: {
+    en: "Multi-Send",
+    ar: "إرسال جماعي"
+  },
+  multiSendCta: {
+    en: "Try It Free",
+    ar: "جرّبه مجاناً"
+  },
+  multiSendLabel1: {
+    en: "Your message",
+    ar: "رسالتك"
+  },
+  multiSendLabel2: {
+    en: "Recipients",
+    ar: "المستلمون"
+  },
+  multiSendSending: {
+    en: "Sending…",
+    ar: "جارٍ الإرسال…"
+  },
+  multiSendDone: {
+    en: "All delivered!",
+    ar: "تم التسليم بالكامل!"
+  },
   featuresHeading: {
     en: "Everything You Need",
     ar: "كل ما تحتاجه"
