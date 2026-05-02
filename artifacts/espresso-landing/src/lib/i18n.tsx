@@ -23,8 +23,8 @@ export const dict: Dictionary = {
     ar: "حمّل من App Store"
   },
   ctaAndroid: {
-    en: "Download for Android",
-    ar: "حمّل لأندرويد"
+    en: "Free APK for Android",
+    ar: "APK مجاني لأندرويد"
   },
   multiSendHeading: {
     en: "Send to Many. Save No One.",
@@ -39,8 +39,8 @@ export const dict: Dictionary = {
     ar: "إرسال جماعي"
   },
   multiSendCta: {
-    en: "Try It Free",
-    ar: "جرّبه مجاناً"
+    en: "Get on the App Store",
+    ar: "احصل عليه من App Store"
   },
   multiSendLabel1: {
     en: "Your message",

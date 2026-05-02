@@ -240,7 +240,7 @@ export function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
               </span>
-              {isRtl ? 'متوفر الآن على iOS وأندرويد' : 'Available for iOS & Android'}
+              {isRtl ? 'iOS مدفوع • APK أندرويد مجاني' : 'iOS App • Free Android APK'}
             </motion.div>
 
             {/* Headline */}
@@ -287,8 +287,11 @@ export function Hero() {
               <a
                 href={ANDROID_APK_URL}
                 download
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto relative"
               >
+                <span className={`absolute -top-2.5 ${isRtl ? 'left-4' : 'right-4'} z-10 bg-primary text-primary-foreground text-[9px] font-black px-1.5 py-0.5 rounded-full tracking-widest uppercase shadow`}>
+                  FREE
+                </span>
                 <Button
                   size="lg"
                   variant="outline"
