@@ -16,7 +16,9 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <img 
             src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/35/af/72/35af7266-1879-2c24-5eb2-b045552a382b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/1200x630wa.png" 
-            alt="Espresso App Icon" 
+            alt="Espresso Messages app icon"
+            width="40"
+            height="40"
             className="w-10 h-10 rounded-xl shadow-sm"
           />
           <span className="font-bold text-xl tracking-tight hidden sm:inline-block">Espresso</span>

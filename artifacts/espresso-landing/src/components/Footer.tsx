@@ -12,7 +12,10 @@ export function Footer() {
           <div className={`flex items-center gap-3 ${isRtl ? 'flex-row-reverse' : ''}`}>
             <img 
               src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/35/af/72/35af7266-1879-2c24-5eb2-b045552a382b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/1200x630wa.png" 
-              alt="Espresso App Icon" 
+              alt="Espresso Messages app icon"
+              width="32"
+              height="32"
+              loading="lazy"
               className="w-8 h-8 rounded-lg shadow-sm grayscale"
             />
             <span className="font-semibold text-muted-foreground">Espresso</span>

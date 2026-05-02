@@ -63,8 +63,11 @@ export function Hero() {
             <div className="w-[280px] sm:w-[320px] iphone-mockup shadow-2xl rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
               <img 
                 src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3d/7d/fa/3d7dfad9-d806-2681-45ef-391be6d8b5a6/pr_source.png/460x996bb.jpg" 
-                alt="Espresso App Screenshot" 
+                alt="Espresso app – send a WhatsApp message to any phone number without saving it as a contact"
+                width="460"
+                height="996"
                 className="w-full h-auto object-cover"
+                fetchPriority="high"
               />
             </div>
           </motion.div>

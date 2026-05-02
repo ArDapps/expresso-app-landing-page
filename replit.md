@@ -25,3 +25,15 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - `pnpm --filter @workspace/api-server run dev` — run API server locally
 
 See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
+
+## Artifacts
+
+### espresso-landing (`artifacts/espresso-landing`)
+- **Type**: React + Vite static landing page
+- **Preview path**: `/`
+- **Purpose**: Bilingual (Arabic/English) landing page for the Espresso Messages iOS app
+- **Features**: Language toggle (EN/AR) with RTL support, real App Store screenshots, contact form via FormSubmit, framer-motion animations
+- **SEO**: Full meta tags, Open Graph, Twitter Card, JSON-LD structured data (MobileApplication + WebSite schemas), robots.txt, sitemap.xml, hreflang, descriptive alt text, lazy loading, fetchPriority on hero image
+- **Contact**: Form submits to mrbeboteam@gmail.com via formsubmit.co
+- **Canonical domain**: https://espresso-messages.app/ (update after deploying to custom domain)
+- **App Store**: https://apps.apple.com/eg/app/espresso-messages-for-whatsapp/id1331369255
