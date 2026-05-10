@@ -5,6 +5,8 @@ import { useLanguage } from '@/lib/i18n';
 import Image from 'next/image';
 import { Mail, Shield, FileText } from 'lucide-react';
 
+const ANDROID_APK_URL = '/assets/expressom.apk';
+
 export function Footer() {
   const { t, isRtl } = useLanguage();
   const year = new Date().getFullYear();
@@ -66,7 +68,8 @@ export function Footer() {
                 App Store
               </a>
               <a 
-                href="#android-apk" 
+                href={ANDROID_APK_URL}
+                download="expressom.apk"
                 className="border border-border bg-background px-4 py-2 rounded-lg text-sm font-semibold flex items-center justify-center gap-2 hover:bg-muted transition-colors"
               >
                 Android APK

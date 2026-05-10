@@ -52,3 +52,4 @@ Thumbs.db
 pnpm-store/
 node_modules/
 .pnpm-debug.log
+.next

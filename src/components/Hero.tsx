@@ -5,7 +5,7 @@ import { useLanguage } from '@/lib/i18n';
 import { motion, AnimatePresence, useMotionValue, useTransform, animate } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 
-const ANDROID_APK_URL = '#android-apk';
+const ANDROID_APK_URL = '/assets/expressom.apk';
 
 function AppleIcon() {
   return (
@@ -288,7 +288,7 @@ export function Hero() {
               </a>
               <a
                 href={ANDROID_APK_URL}
-                download
+                download="expressom.apk"
                 className="w-full sm:w-auto relative"
               >
                 <span className="absolute -top-2.5 right-4 z-10 bg-primary text-primary-foreground text-[9px] font-black px-1.5 py-0.5 rounded-full tracking-widest uppercase shadow">
